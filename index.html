@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#inputTab">Input Parameters</a></li>
+        </ul>
+        <div id="inputTab">
+            <!-- Form to accept four numbers from the user -->
+            <form id="multiplicationForm">
+                <div class="form-group">
+                    <label for="minColumnValue">Minimum Column Value:</label>
+                    <input type="text" id="minColumnValue" name="minColumnValue" data-slider="minColumnSlider" value="0" required>
+                    <div id="minColumnSlider" data-input="minColumnValue"></div>
+                </div>
+                <div class="form-group">
+                    <label for="maxColumnValue">Maximum Column Value:</label>
+                    <input type="text" id="maxColumnValue" name="maxColumnValue" data-slider="maxColumnSlider" value="0" required>
+                    <div id="maxColumnSlider" data-input="maxColumnValue"></div>
+                </div>
+                <div class="form-group">
+                    <label for="minRowValue">Minimum Row Value:</label>
+                    <input type="text" id="minRowValue" name="minRowValue" data-slider="minRowSlider" value="0" required>
+                    <div id="minRowSlider" data-input="minRowValue"></div>
+                </div>
+                <div class="form-group">
+                    <label for="maxRowValue">Maximum Row Value:</label>
+                    <input type="text" id="maxRowValue" name="maxRowValue" data-slider="maxRowSlider" value="0" required>
+                    <div id="maxRowSlider" data-input="maxRowValue"></div>
+                </div>
+                <button type="submit">Generate Table</button>
+            </form>
+            <!-- Container to hold the generated table -->
+            <div id="tableContainer"></div>
+            <!-- Container to display error messages -->
+            <div id="errorMessage" class="error"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

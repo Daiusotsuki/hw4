@@ -1,0 +1,59 @@
+/* Adding some basic CSS styles */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form-group label {
+    margin-bottom: 5px;
+}
+.form-group input {
+    margin-bottom: 5px;
+}
+#minColumnSlider, #maxColumnSlider, #minRowSlider, #maxRowSlider {
+    margin-bottom: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: auto; /* Adjust width to fit content */
+}
+th, td {
+    border: 1px solid #000;
+    width: 50px; /* Fixed width for square cells */
+    height: 50px; /* Fixed height for square cells */
+    min-width: 50px; /* Ensure minimum width */
+    min-height: 50px; /* Ensure minimum height */
+    text-align: center;
+    box-sizing: border-box; /* Ensure border width is included in the width and height */
+}
+th {
+    background-color: #d3d3d3; /* Darker background for headers */
+}
+/* Fixing the table headers and first column */
+table thead th, table tbody th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+table tbody th {
+    position: sticky;
+    left: 0;
+    background-color: #d3d3d3; /* Darker background for row headers */
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+/* Making the table container scrollable */
+#tableContainer {
+    max-height: 400px; /* Fixed height for container */
+    max-width: 800px; /* Fixed width for container */
+    overflow: auto;
+    border: 1px solid #000; /* Optional: To highlight the scrollable area */
+}
